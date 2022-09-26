@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>async-proyect</title>
+  <!-- FONTS  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Oswald:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- BOOTSTRAP CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- fontawesome cdn -->
+  <script src="https://kit.fontawesome.com/6384ca2ff3.js" crossorigin="anonymous"></script>
+  <!-- MY CSS -->
+  <link rel="stylesheet" href="./src/styles/style.css">
+</head>
+
+<body>
+  <!-- moving stars effect -->
+  <section class="wrapper">
+    <div id="stars"></div>
+    <div id="stars2"></div> 
+    <div id="stars3"></div>
+    <div id="title">
+    </div>
+  </section>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid navbar--items--spacing">
+      <a class="navbar-brand navbar__title--primary" href="#"><img src="./img/NASA_logo.svg.png" height="50px"
+        width="60px" alt="" class="logo-nasa-svg"> N.P.O.D</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#moreInfo">MORE INFO</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+
+
+    <section>
+      <h1 class="text-center main-tittle__font-style">NASA PICTURE OF THE DAY</h1>
+      <article id="contentContainerPOD" class="card card-main-container" style="width: 90vw; height: 50vh;">
+        
+      </article>
+      
+      <!-- This is the container of the error -->
+      <article id="errorTrigger" class="error-container">
+        
+      </article>
+    </section>
+
+    <section>
+      <h2 class="text-center mars-title--styles"> MARS PICTURES TAKEN BY PERSEVERANCE</h2>
+      <article class="container-mars-api" id="contentContainerMarsRoverPhotos">
+        
+      </article>
+    </section>
+  </main>
+  
+  <footer id="moreInfo">
+    <section class="container-sm">
+      <div class="col">
+          <div class="row index-footer">
+            <div class="col footer__briefcase-social-media--style">
+              <img src="./img/briefcase_picture.jpg" class="container__picture--size-style" alt="">
+            </div>
+            <div class="col footer__brief-case-names-logo-container__flex">
+              <h2 class="text-center footer__name-text--font-style">MIGUEL VARON RAMIREZ.</h2>
+              <h6 class="text-center footer__name-text--font-style">FRONTEND DEVELOPER</h6>
+              <img src="./img/logo_marca_personal_v2.png" class="container__logo--size-style" alt="">
+            </div>
+            <div class="col footer__container-social-media-icons--style">
+              <ul class="footer__social-media-list--style">
+                <li>
+                  <a href="https://www.instagram.com/miguelalejovaron/">
+                    <lottie-player src="https://lottie.host/4a38da40-d876-45db-9f55-deb5e42584bc/J4Tqw60hnr.json"
+                      background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/miguel-alejandro-varon-473665186/">
+                    <lottie-player src="https://lottie.host/d95a13f9-61e9-4762-9281-10f3f4d5b408/ibeqls2HjY.json"
+                      background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+                  </a>
+                </li>
+                <li>
+                  <button class="footer-mail__button--styles" type="click" onclick="clickMailEvent()">
+                    <lottie-player src="https://lottie.host/89df6a66-07d6-43d4-b73d-d79d57fb119e/D0VRLuAQ6Y.json"
+                      background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+                  </button>
+                </li>
+                <li>
+                  <a href="https://github.com/miguelalejovaron">
+                    <lottie-player src="https://lottie.host/8b3ef114-d918-4add-ab1c-cf3c78666ac9/MdpzF7Tt37.json"
+                      background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+                  </a>
+                </li>
+              </ul>
+              <div id="iFClickInMail">
+
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+  </footer>
+  <!-- ANIMACIONES -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <!-- My js -->
+  <script src="./src/assets/index.js"></script>
+  <script src="./src/assets/main.js"></script>
+</body>
+
+</html>
